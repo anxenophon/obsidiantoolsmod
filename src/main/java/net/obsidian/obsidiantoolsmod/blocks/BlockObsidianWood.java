@@ -13,7 +13,7 @@ public class BlockObsidianWood extends Block {
 		this.setUnlocalizedName(ObsidianToolsMod.OBSIDIAN_WOOD_NAME);
 
 		this.setHardness(2.0F);
-		this.setResistance(6000.0F);
+		this.setResistance(2000.0F);
 		this.setHarvestLevel("axe", 0);
 		this.setLightLevel(0.0F);
 	}

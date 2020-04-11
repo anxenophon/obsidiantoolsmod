@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "variant=default": {
+            "model": "obsidiantoolsmod:obsidian_slab_double"
+        }
+    }
+}

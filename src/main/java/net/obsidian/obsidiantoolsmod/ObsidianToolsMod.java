@@ -1,10 +1,12 @@
 package net.obsidian.obsidiantoolsmod;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSlab;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -19,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianSlab;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWood;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianAxe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianFragment;
@@ -42,6 +45,8 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_PICKAXE_NAME = "obsidian_pickaxe";
 	public static final String OBSIDIAN_SHOVEL_NAME = "obsidian_shovel";
 	public static final String OBSIDIAN_HOE_NAME = "obsidian_hoe";
+	public static final String OBSIDIAN_SLAB_NAME = "obsidian_slab";
+	public static final String OBSIDIAN_SLAB_DOUBLE_NAME = "obsidian_slab_double";
 
 	// インスタンス
 	public static final Item OBSIDIAN_FRAGMENT = new ItemObsidianFragment();
@@ -54,6 +59,8 @@ public class ObsidianToolsMod {
 	public static final Item OBSIDIAN_PICKAXE = new ItemObsidianPickaxe(OBSIDIAN_MATERIAL);
 	public static final Item OBSIDIAN_SHOVEL = new ItemObsidianShovel(OBSIDIAN_MATERIAL);
 	public static final Item OBSIDIAN_HOE = new ItemObsidianHoe(OBSIDIAN_MATERIAL);
+	public static final Block OBSIDIAN_SLAB = new BlockObsidianSlab.Half();
+	public static final Block OBSIDIAN_SLAB_DOUBLE = new BlockObsidianSlab.Double();
 
 	@Mod.EventHandler
 	//この関数でMODファイル自体をイベントの発火先にする。
@@ -76,12 +83,15 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(OBSIDIAN_PICKAXE);
 		event.getRegistry().register(OBSIDIAN_SHOVEL);
 		event.getRegistry().register(OBSIDIAN_HOE);
+		event.getRegistry().register(new ItemSlab(OBSIDIAN_SLAB, (BlockSlab)OBSIDIAN_SLAB, (BlockSlab)OBSIDIAN_SLAB_DOUBLE).setRegistryName(MODID, OBSIDIAN_SLAB_NAME));
 	}
 
 	//ブロックを登録するイベント。 旧preinitのタイミングで発火する。
 	@SubscribeEvent
 	public void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().register(OBSIDIAN_WOOD);
+		event.getRegistry().register(OBSIDIAN_SLAB);
+		event.getRegistry().register(OBSIDIAN_SLAB_DOUBLE);
 	}
 
 	//モデルを登録するイベント。SideOnlyによってクライアント側のみ呼ばれる。旧preinitのタイミングで発火する。
@@ -102,5 +112,7 @@ public class ObsidianToolsMod {
 				new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SHOVEL_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_HOE, 0,
 				new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_HOE_NAME), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_SLAB), 0,
+				new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SLAB_NAME), "inventory"));
 	}
 }
