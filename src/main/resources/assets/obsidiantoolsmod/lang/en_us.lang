@@ -1,3 +1,8 @@
 #ObsidianToolsMod English Language File
 item.obsidian_fragment.name=Obsidian Fragment
-tile.obsidian_wood.name=Obsidian Wood
+tile.obsidian_wood.name=Obsidian Planks
+item.obsidian_sword.name=Obsidian Sword
+item.obsidian_axe.name=Obsidian Axe
+item.obsidian_pickaxe.name=Obsidian Pickaxe
+item.obsidian_shovel.name=Obsidian Shovel
+item.obsidian_hoe.name=Obsidian Hoe

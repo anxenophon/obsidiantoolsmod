@@ -1,18 +1,22 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "###",
-        "###",
-        "###"
+        "#",
+        "#",
+        "S"
     ],
     "key": {
         "#": {
             "item": "obsidiantoolsmod:obsidian_fragment",
             "data": 0
+        },
+        "S": {
+            "item": "minecraft:stick",
+            "data": 0
         }
     },
     "result": {
-        "item": "minecraft:obsidian",
+        "item": "obsidiantoolsmod:obsidian_sword",
         "data": 0
     }
 }

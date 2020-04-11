@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "obsidiantoolsmod:blocks/obsidian_wood"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "obsidiantoolsmod:blocks/obsidian_wood"
+    }
 }

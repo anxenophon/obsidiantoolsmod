@@ -1,5 +1,7 @@
 {
     "variants": {
-        "normal": { "model": "obsidiantoolsmod:obsidian_wood" }
+        "normal": {
+            "model": "obsidiantoolsmod:obsidian_wood"
+        }
     }
 }
