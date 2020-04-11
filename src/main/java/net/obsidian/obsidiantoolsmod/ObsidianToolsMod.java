@@ -26,6 +26,7 @@ public class ObsidianToolsMod {
     // アイテム・ブロックのインスタンス生成
     public static final Item OBSIDIAN_FRAGMENT = new ItemObsidianFragment();
     public static final Block OBSIDIAN_WOOD = new BlockObsidianWood();
+    public static final Item OBSIDIAN_SWORD = new Item();
 
     // アイテム・ブロック名称(大文字禁止)
     public static final String OBSIDIAN_FRAGMENT_NAME = "obsidian_fragment";
