@@ -1,8 +1,13 @@
 #黒曜石Mod 日本語言語ファイル
 item.obsidian_fragment.name=黒曜石の欠片
-tile.obsidian_wood.name=黒曜石入り木材
+
 item.obsidian_sword.name=黒曜石の剣
 item.obsidian_axe.name=黒曜石の斧
 item.obsidian_pickaxe.name=黒曜石のツルハシ
 item.obsidian_shovel.name=黒曜石のシャベル
 item.obsidian_hoe.name=黒曜石のクワ
+
+tile.obsidian_wood.name=黒曜石入り木材
+tile.obsidian_slab.name=黒曜石のハーフブロック
+tile.obsidian_stair.name=黒曜石の階段
+tile.obsidian_fence.name=黒曜石のフェンス

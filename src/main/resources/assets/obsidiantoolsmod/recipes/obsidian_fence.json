@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "#S#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:obsidian",
+            "data": 0
+        },
+        "S": {
+            "item": "minecraft:stick",
+            "data": 0
+        }
+    },
+    "result": {
+        "item": "obsidiantoolsmod:obsidian_fence",
+        "data": 0,
+        "count": 4
+    }
+}
