@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianFence;
+import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianGate;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianSlab;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianStair;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWood;
@@ -53,6 +54,7 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_SLAB_DOUBLE_NAME = "obsidian_slab_double";
 	public static final String OBSIDIAN_STAIR_NAME = "obsidian_stair";
 	public static final String OBSIDIAN_FENCE_NAME = "obsidian_fence";
+	public static final String OBSIDIAN_GATE_NAME = "obsidian_fence_gate";
 
 	// アイテムインスタンス
 	public static final Item OBSIDIAN_FRAGMENT = new ItemObsidianFragment();
@@ -69,6 +71,7 @@ public class ObsidianToolsMod {
 	public static final Block OBSIDIAN_SLAB_DOUBLE = new BlockObsidianSlab.Double();
 	public static final Block OBSIDIAN_STAIR = new BlockObsidianStair();
 	public static final Block OBSIDIAN_FENCE = new BlockObsidianFence();
+	public static final Block OBSIDIAN_GATE = new BlockObsidianGate();
 
 	@Mod.EventHandler
 	//この関数でMODファイル自体をイベントの発火先にする。
@@ -95,6 +98,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(new ItemSlab(OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB_DOUBLE).setRegistryName(MODID, OBSIDIAN_SLAB_NAME));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_STAIR).setRegistryName(MODID, OBSIDIAN_STAIR_NAME));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_FENCE).setRegistryName(MODID, OBSIDIAN_FENCE_NAME));
+		event.getRegistry().register(new ItemBlock(OBSIDIAN_GATE).setRegistryName(MODID, OBSIDIAN_GATE_NAME));
 	}
 
 	//ブロックを登録するイベント。 旧preinitのタイミングで発火する。
@@ -105,6 +109,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(OBSIDIAN_SLAB_DOUBLE);
 		event.getRegistry().register(OBSIDIAN_STAIR);
 		event.getRegistry().register(OBSIDIAN_FENCE);
+		event.getRegistry().register(OBSIDIAN_GATE);
 	}
 
 	//モデルを登録するイベント。SideOnlyによってクライアント側のみ呼ばれる。旧preinitのタイミングで発火する。
@@ -122,5 +127,6 @@ public class ObsidianToolsMod {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_SLAB), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SLAB_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_STAIR), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_STAIR_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_FENCE), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_FENCE_NAME), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_GATE), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_GATE_NAME), "inventory"));
 	}
 }

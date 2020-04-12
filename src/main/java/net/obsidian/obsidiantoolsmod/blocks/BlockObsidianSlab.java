@@ -21,7 +21,7 @@ public abstract class BlockObsidianSlab extends BlockSlab {
 	public static final PropertyEnum<Variant> VARIANT = PropertyEnum.<Variant> create("variant", Variant.class);
 
 	public BlockObsidianSlab() {
-		super(Material.ROCK);
+		super(Material.IRON);
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		this.setHardness(50.0F);
 		this.setResistance(2000.0F);

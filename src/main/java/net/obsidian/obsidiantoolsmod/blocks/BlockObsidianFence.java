@@ -7,9 +7,9 @@ import net.obsidian.obsidiantoolsmod.ObsidianToolsMod;
 
 public class BlockObsidianFence extends BlockFence {
 	public BlockObsidianFence() {
-		super(Material.ROCK, Material.ROCK.getMaterialMapColor());
+		super(Material.IRON, Material.IRON.getMaterialMapColor());
 		this.setRegistryName(ObsidianToolsMod.MODID, ObsidianToolsMod.OBSIDIAN_FENCE_NAME);
-		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		this.setCreativeTab(CreativeTabs.DECORATIONS);
 		this.setUnlocalizedName(ObsidianToolsMod.OBSIDIAN_FENCE_NAME);
 		this.setHardness(50.0F);
 		this.setResistance(2000.0F);
