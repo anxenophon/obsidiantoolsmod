@@ -11,3 +11,5 @@ tile.obsidian_wood.name=黒曜石入り木材
 tile.obsidian_slab.name=黒曜石のハーフブロック
 tile.obsidian_stair.name=黒曜石の階段
 tile.obsidian_fence.name=黒曜石のフェンス
+tile.obsidian_fence_gate.name=黒曜石のフェンスゲート
+tile.obsidian_wall.name=黒曜石の壁

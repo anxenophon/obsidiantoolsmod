@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:obsidian",
+            "data": 0
+        }
+    },
+    "result": {
+        "item": "obsidiantoolsmod:obsidian_wall",
+        "data": 0,
+        "count": 6
+    }
+}
