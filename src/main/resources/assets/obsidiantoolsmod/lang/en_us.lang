@@ -1,6 +1,7 @@
 #ObsidianToolsMod English Language File
-item.obsidian_fragment.name=Obsidian Fragment
+itemGroup.obsidian_tools=Obsidian Tools
 
+item.obsidian_fragment.name=Obsidian Fragment
 item.obsidian_sword.name=Obsidian Sword
 item.obsidian_axe.name=Obsidian Axe
 item.obsidian_pickaxe.name=Obsidian Pickaxe

@@ -18,11 +18,4 @@ public class TabObsidianTools extends CreativeTabs{
 		return new ItemStack(ObsidianToolsMod.OBSIDIAN_SWORD);
 	}
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public String getTranslatedTabLabel()
-	{
-		return "Obsidian Tools";
-	}
-
 }
