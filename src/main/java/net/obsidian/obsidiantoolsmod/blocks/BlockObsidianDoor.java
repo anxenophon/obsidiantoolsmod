@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +18,7 @@ public class BlockObsidianDoor extends BlockDoor {
 	public BlockObsidianDoor() {
 		super(Material.IRON);
 		this.setRegistryName(ObsidianToolsMod.MODID, ObsidianToolsMod.OBSIDIAN_DOOR_NAME);
-		this.setCreativeTab(CreativeTabs.DECORATIONS);
+		this.setCreativeTab(ObsidianToolsMod.OBSIDIAN_TOOLS_TAB);
 		this.setUnlocalizedName(ObsidianToolsMod.OBSIDIAN_DOOR_NAME);
 		this.setHardness(50.0F);
 		this.setResistance(2000.0F);

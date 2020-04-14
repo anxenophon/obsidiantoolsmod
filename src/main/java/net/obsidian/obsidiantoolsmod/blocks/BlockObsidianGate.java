@@ -13,7 +13,6 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
@@ -45,7 +44,7 @@ public class BlockObsidianGate extends BlockHorizontal
         super(Material.IRON, Material.IRON.getMaterialMapColor());
 
 		this.setRegistryName(ObsidianToolsMod.MODID, ObsidianToolsMod.OBSIDIAN_GATE_NAME);
-		this.setCreativeTab(CreativeTabs.REDSTONE);
+		this.setCreativeTab(ObsidianToolsMod.OBSIDIAN_TOOLS_TAB);
 		this.setUnlocalizedName(ObsidianToolsMod.OBSIDIAN_GATE_NAME);
 		this.setHardness(50.0F);
 		this.setResistance(2000.0F);

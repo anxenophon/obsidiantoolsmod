@@ -3,6 +3,7 @@ package net.obsidian.obsidiantoolsmod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemBlock;
@@ -35,6 +36,7 @@ import net.obsidian.obsidiantoolsmod.items.ItemObsidianHoe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianPickaxe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianShovel;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianSword;
+import net.obsidian.obsidiantoolsmod.tabs.TabObsidianTools;
 
 @Mod(modid = ObsidianToolsMod.MODID, name = ObsidianToolsMod.NAME, version = ObsidianToolsMod.VERSION)
 public class ObsidianToolsMod {
@@ -42,7 +44,11 @@ public class ObsidianToolsMod {
 	public static final String NAME = "Obsidian Tools MOD";
 	public static final String VERSION = "1.0.1";
 
-	// アイテム名称(大文字禁止)
+	// クリエイティブタブ
+	public static final String OBSIDIAN_TOOLS_TAB_NAME = "obsidian_tools";
+	public static final CreativeTabs OBSIDIAN_TOOLS_TAB = new TabObsidianTools();
+
+	// アイテム内部名称(大文字禁止)
 	public static final String OBSIDIAN_FRAGMENT_NAME = "obsidian_fragment";
 	public static final String OBSIDIAN_MATERIAL_NAME = "obsidian_material";
 	public static final String OBSIDIAN_SWORD_NAME = "obsidian_sword";
@@ -51,7 +57,7 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_SHOVEL_NAME = "obsidian_shovel";
 	public static final String OBSIDIAN_HOE_NAME = "obsidian_hoe";
 
-	// ブロック名称(大文字禁止)
+	// ブロック内部名称(大文字禁止)
 	public static final String OBSIDIAN_WOOD_NAME = "obsidian_wood";
 	public static final String OBSIDIAN_SLAB_NAME = "obsidian_slab";
 	public static final String OBSIDIAN_SLAB_DOUBLE_NAME = "obsidian_slab_double";
