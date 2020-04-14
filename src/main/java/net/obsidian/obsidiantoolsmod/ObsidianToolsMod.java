@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianDoor;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianFence;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianGate;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianSlab;
@@ -28,6 +29,7 @@ import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianStair;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWall;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWood;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianAxe;
+import net.obsidian.obsidiantoolsmod.items.ItemObsidianDoor;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianFragment;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianHoe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianPickaxe;
@@ -38,7 +40,7 @@ import net.obsidian.obsidiantoolsmod.items.ItemObsidianSword;
 public class ObsidianToolsMod {
 	public static final String MODID = "obsidiantoolsmod";
 	public static final String NAME = "Obsidian Tools MOD";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.0.1";
 
 	// アイテム名称(大文字禁止)
 	public static final String OBSIDIAN_FRAGMENT_NAME = "obsidian_fragment";
@@ -57,6 +59,7 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_FENCE_NAME = "obsidian_fence";
 	public static final String OBSIDIAN_GATE_NAME = "obsidian_fence_gate";
 	public static final String OBSIDIAN_WALL_NAME = "obsidian_wall";
+	public static final String OBSIDIAN_DOOR_NAME = "obsidian_door";
 
 	// アイテムインスタンス
 	public static final Item OBSIDIAN_FRAGMENT = new ItemObsidianFragment();
@@ -75,6 +78,8 @@ public class ObsidianToolsMod {
 	public static final Block OBSIDIAN_FENCE = new BlockObsidianFence();
 	public static final Block OBSIDIAN_GATE = new BlockObsidianGate();
 	public static final Block OBSIDIAN_WALL = new BlockObsidianWall();
+	public static final Block OBSIDIAN_DOOR = new BlockObsidianDoor();
+	public static final Item OBSIDIAN_DOOR_ITEM = new ItemObsidianDoor(OBSIDIAN_DOOR);
 
 	@Mod.EventHandler
 	//この関数でMODファイル自体をイベントの発火先にする。
@@ -103,6 +108,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_FENCE).setRegistryName(OBSIDIAN_FENCE.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_GATE).setRegistryName(OBSIDIAN_GATE.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_WALL).setRegistryName(OBSIDIAN_WALL.getRegistryName()));
+		event.getRegistry().register(OBSIDIAN_DOOR_ITEM);
 	}
 
 	//ブロックを登録するイベント。 旧preinitのタイミングで発火する。
@@ -115,6 +121,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(OBSIDIAN_FENCE);
 		event.getRegistry().register(OBSIDIAN_GATE);
 		event.getRegistry().register(OBSIDIAN_WALL);
+		event.getRegistry().register(OBSIDIAN_DOOR);
 	}
 
 	//モデルを登録するイベント。SideOnlyによってクライアント側のみ呼ばれる。旧preinitのタイミングで発火する。
@@ -134,5 +141,6 @@ public class ObsidianToolsMod {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_FENCE), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_FENCE_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_GATE), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_GATE_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_WALL), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_WALL_NAME), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_DOOR), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_DOOR_NAME), "inventory"));
 	}
 }

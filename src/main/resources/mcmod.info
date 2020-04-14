@@ -1,16 +1,16 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
+  "modid": "obsidiantoolsmod",
+  "name": "Obsidian Tools Mod",
+  "description": "黒曜石を使ったなんかです。日本語推奨。",
+  "version": "1.0.0",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/anxenophon/obsidiantoolsmod",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "authorList": ["xenophon_aoc"],
+  "credits": "",
+  "logoFile": "assets/obsidiantoolsmod/logo.png",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["mod_MinecraftForge"]
 }
 ]
