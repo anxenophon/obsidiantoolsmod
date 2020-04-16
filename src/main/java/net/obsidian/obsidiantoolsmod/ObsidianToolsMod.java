@@ -34,6 +34,7 @@ import net.obsidian.obsidiantoolsmod.items.ItemObsidianDoor;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianFragment;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianHoe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianPickaxe;
+import net.obsidian.obsidiantoolsmod.items.ItemObsidianShears;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianShovel;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianSword;
 import net.obsidian.obsidiantoolsmod.tabs.TabObsidianTools;
@@ -56,6 +57,7 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_PICKAXE_NAME = "obsidian_pickaxe";
 	public static final String OBSIDIAN_SHOVEL_NAME = "obsidian_shovel";
 	public static final String OBSIDIAN_HOE_NAME = "obsidian_hoe";
+	public static final String OBSIDIAN_SHEARS_NAME = "obsidian_shears";
 
 	// ブロック内部名称(大文字禁止)
 	public static final String OBSIDIAN_WOOD_NAME = "obsidian_wood";
@@ -75,6 +77,7 @@ public class ObsidianToolsMod {
 	public static final Item OBSIDIAN_PICKAXE = new ItemObsidianPickaxe(OBSIDIAN_MATERIAL);
 	public static final Item OBSIDIAN_SHOVEL = new ItemObsidianShovel(OBSIDIAN_MATERIAL);
 	public static final Item OBSIDIAN_HOE = new ItemObsidianHoe(OBSIDIAN_MATERIAL);
+	public static final Item OBSIDIAN_SHEARS = new ItemObsidianShears();
 
 	// ブロックインスタンス
 	public static final Block OBSIDIAN_WOOD = new BlockObsidianWood();
@@ -107,6 +110,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(OBSIDIAN_PICKAXE);
 		event.getRegistry().register(OBSIDIAN_SHOVEL);
 		event.getRegistry().register(OBSIDIAN_HOE);
+		event.getRegistry().register(OBSIDIAN_SHEARS);
 
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_WOOD).setRegistryName(OBSIDIAN_WOOD.getRegistryName()));
 		event.getRegistry().register(new ItemSlab(OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB_DOUBLE).setRegistryName(OBSIDIAN_SLAB.getRegistryName()));
@@ -140,6 +144,7 @@ public class ObsidianToolsMod {
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_PICKAXE, 0,	new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_PICKAXE_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_SHOVEL, 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SHOVEL_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_HOE, 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_HOE_NAME), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_SHEARS, 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SHEARS_NAME), "inventory"));
 
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_WOOD), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_WOOD_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_SLAB), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SLAB_NAME), "inventory"));
