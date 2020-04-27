@@ -27,8 +27,8 @@ import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianFence;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianGate;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianSlab;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianStair;
+import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianTestBlock;
 import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWall;
-import net.obsidian.obsidiantoolsmod.blocks.BlockObsidianWood;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianAxe;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianDoor;
 import net.obsidian.obsidiantoolsmod.items.ItemObsidianFragment;
@@ -60,7 +60,7 @@ public class ObsidianToolsMod {
 	public static final String OBSIDIAN_SHEARS_NAME = "obsidian_shears";
 
 	// ブロック内部名称(大文字禁止)
-	public static final String OBSIDIAN_WOOD_NAME = "obsidian_wood";
+	public static final String OBSIDIAN_TESTBLOCK_NAME = "obsidian_testblock";
 	public static final String OBSIDIAN_SLAB_NAME = "obsidian_slab";
 	public static final String OBSIDIAN_SLAB_DOUBLE_NAME = "obsidian_slab_double";
 	public static final String OBSIDIAN_STAIR_NAME = "obsidian_stair";
@@ -80,7 +80,7 @@ public class ObsidianToolsMod {
 	public static final Item OBSIDIAN_SHEARS = new ItemObsidianShears();
 
 	// ブロックインスタンス
-	public static final Block OBSIDIAN_WOOD = new BlockObsidianWood();
+	public static final Block OBSIDIAN_TESTBLOCK = new BlockObsidianTestBlock();
 	public static final Block OBSIDIAN_SLAB = new BlockObsidianSlab.Half();
 	public static final Block OBSIDIAN_SLAB_DOUBLE = new BlockObsidianSlab.Double();
 	public static final Block OBSIDIAN_STAIR = new BlockObsidianStair();
@@ -112,7 +112,7 @@ public class ObsidianToolsMod {
 		event.getRegistry().register(OBSIDIAN_HOE);
 		event.getRegistry().register(OBSIDIAN_SHEARS);
 
-		event.getRegistry().register(new ItemBlock(OBSIDIAN_WOOD).setRegistryName(OBSIDIAN_WOOD.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(OBSIDIAN_TESTBLOCK).setRegistryName(OBSIDIAN_TESTBLOCK.getRegistryName()));
 		event.getRegistry().register(new ItemSlab(OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB, (BlockSlab) OBSIDIAN_SLAB_DOUBLE).setRegistryName(OBSIDIAN_SLAB.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_STAIR).setRegistryName(OBSIDIAN_STAIR.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(OBSIDIAN_FENCE).setRegistryName(OBSIDIAN_FENCE.getRegistryName()));
@@ -124,7 +124,7 @@ public class ObsidianToolsMod {
 	//ブロックを登録するイベント。 旧preinitのタイミングで発火する。
 	@SubscribeEvent
 	public void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(OBSIDIAN_WOOD);
+		event.getRegistry().register(OBSIDIAN_TESTBLOCK);
 		event.getRegistry().register(OBSIDIAN_SLAB);
 		event.getRegistry().register(OBSIDIAN_SLAB_DOUBLE);
 		event.getRegistry().register(OBSIDIAN_STAIR);
@@ -146,7 +146,7 @@ public class ObsidianToolsMod {
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_HOE, 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_HOE_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(OBSIDIAN_SHEARS, 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SHEARS_NAME), "inventory"));
 
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_WOOD), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_WOOD_NAME), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_TESTBLOCK), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_TESTBLOCK_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_SLAB), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_SLAB_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_STAIR), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_STAIR_NAME), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(OBSIDIAN_FENCE), 0, new ModelResourceLocation(new ResourceLocation(MODID, OBSIDIAN_FENCE_NAME), "inventory"));

@@ -9,7 +9,7 @@ item.obsidian_shovel.name=Obsidian Shovel
 item.obsidian_hoe.name=Obsidian Hoe
 item.obsidian_shears.name=Obsidian Shears
 
-tile.obsidian_wood.name=Obsidian Planks
+tile.obsidian_testblock.name=Obsidian Testblock
 tile.obsidian_slab.name=Obsidian Slab
 tile.obsidian_stair.name=Obsidian Stairs
 tile.obsidian_fence.name=Obsidian Fence
